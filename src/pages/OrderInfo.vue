@@ -118,9 +118,9 @@ export default defineComponent({
   setup() {
     const store = useStore();
     const route = useRoute();
-    const orderDetail = computed(() => store.getters.getOrderInfo);
+    const orderDetail = computed(() => store.getters['order/getOrderInfo']);
     const loadInfo = () => {
-      store.dispatch('loadOrderInfo', route.params.id);
+      store.dispatch('order/loadOrderInfo', route.params.id);
     };
     watch(
       () => route.fullPath,

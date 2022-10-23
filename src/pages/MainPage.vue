@@ -67,6 +67,7 @@ export default defineComponent({
 
     const { products, fetchProducts, errorMessage, fetchStatus, pagination } =
       useProducts();
+
     watch(
       filterSetting,
       () => {

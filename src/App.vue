@@ -130,7 +130,7 @@ export default defineComponent({
     const store = useStore();
     const userKey = localStorage.getItem('userAccessKey');
     const loadBasketData = () => {
-      store.dispatch('loadBasketData');
+      store.dispatch('basket/loadBasketData');
     };
 
     if (userKey) {

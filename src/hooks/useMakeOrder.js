@@ -60,10 +60,9 @@ export default function () {
           },
         }
       );
-      store.commit('resetBasket');
-      store.commit('updateOrderInfo', data);
+      store.commit('basket/resetBasket');
+      store.commit('order/updateOrderInfo', data);
       errorForm.value = {};
-      console.log(data);
       router.push({
         name: 'orderInfo',
         params: { id: data.id },

@@ -208,8 +208,10 @@ export default defineComponent({
       payment,
       errorForm,
     } = useMakeOrder();
-    const products = computed(() => store.getters.getBasketProductData);
-    const totalPrice = computed(() => store.getters.getTotalPrice);
+    const products = computed(
+      () => store.getters['basket/getBasketProductData']
+    );
+    const totalPrice = computed(() => store.getters['basket/getTotalPrice']);
 
     delivery();
     payment(formData.deliveryTypeId);

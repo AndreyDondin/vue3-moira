@@ -71,8 +71,10 @@ export default defineComponent({
     const loadBasketData = () => {
       store.dispatch('loadBasketData');
     };
-    const basketData = computed(() => store.getters.getBasketProductData);
-    const totalPrice = computed(() => store.getters.getTotalPrice);
+    const basketData = computed(
+      () => store.getters['basket/getBasketProductData']
+    );
+    const totalPrice = computed(() => store.getters['basket/getTotalPrice']);
 
     return {
       basketData,

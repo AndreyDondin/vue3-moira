@@ -10,7 +10,7 @@
       <use xlink:href="#icon-cart"></use>
     </svg>
     <span class="header__count" aria-label="Количество товаров">{{
-      $store.getters.getBasketProductData.length
+      $store.state.basket.basketProductData.length
     }}</span>
   </router-link>
 </template>
@@ -21,6 +21,5 @@ import FetchSpinner from './FetchSpinner.vue';
 
 export default defineComponent({
   components: { FetchSpinner },
-  setup() {},
 });
 </script>

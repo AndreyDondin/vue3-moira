@@ -72,7 +72,7 @@ export default defineComponent({
         return props.item.quantity;
       },
       set(value) {
-        store.dispatch('updateQuantityProductInBasket', {
+        store.dispatch('basket/updateQuantityProductInBasket', {
           basketItemId: props.item.id,
           quantity: value,
         });
@@ -82,7 +82,7 @@ export default defineComponent({
     const formatColor = formatColorTitle(props.item.color.color.title);
 
     const deleteProduct = () => {
-      store.dispatch('deleteProduct', props.item.id);
+      store.dispatch('basket/deleteProduct', props.item.id);
     };
 
     const increment = () => {

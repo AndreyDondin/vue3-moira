@@ -20,7 +20,7 @@ export default function (productData) {
   const addToBasket = async () => {
     productAddeding.value = true;
     productAdded.value = false;
-    await store.dispatch('addProductToBasket', {
+    await store.dispatch('basket/addProductToBasket', {
       productId: productData.value.id,
       colorId: productColor.value,
       sizeId: productSize.value,
